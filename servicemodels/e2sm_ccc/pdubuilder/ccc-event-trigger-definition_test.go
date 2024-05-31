@@ -6,6 +6,7 @@ package pdubuilder
 import (
 	"testing"
 
+
 	encoder "github.com/onosproject/onos-e2-sm/servicemodels/e2sm_ccc/encoder"
 	e2smcccv1 "github.com/onosproject/onos-e2-sm/servicemodels/e2sm_ccc/v1/e2sm-ccc-ies"
 	"github.com/stretchr/testify/assert"
@@ -14,6 +15,7 @@ import (
 func TestCreateE2SmCCcRIceventTriggerDefinition(t *testing.T) {
 	eventTriggerDefinitionFormat := &e2smcccv1.EventTriggerDefinitionFormat{}
 	result, err := CreateE2SmCCcRIceventTriggerDefinition(eventTriggerDefinitionFormat)
+
 	encodedMsg, err := encoder.PerEncodeE2SmCCcRIceventTriggerDefinition(result)
 	assert.NoError(t, err)
 	assert.NotNil(t, encodedMsg)
@@ -25,6 +27,8 @@ func TestCreateE2SmCCcRIceventTriggerDefinition(t *testing.T) {
 	assert.NotNil(t, result)
 	err = result.Validate()
 	assert.NoError(t, err)
+	assert.NoError(t, err)
+	assert.NotNil(t, result)
 }
 
 func TestCreateE2SmCCcEventTriggerDefinitionFormat1(t *testing.T) {
@@ -40,6 +44,7 @@ func TestCreateE2SmCCcEventTriggerDefinitionFormat1(t *testing.T) {
 	assert.NotNil(t, result)
 	err = result.Validate()
 	assert.NoError(t, err)
+
 }
 
 func TestCreateListOfRanconfigurationStructuresForEventTrigger(t *testing.T) {
@@ -50,6 +55,7 @@ func TestCreateListOfRanconfigurationStructuresForEventTrigger(t *testing.T) {
 	result, err := CreateListOfRanconfigurationStructuresForEventTrigger(value)
 	assert.NoError(t, err)
 	assert.NotNil(t, result)
+
 	err = result.Validate()
 	assert.NoError(t, err)
 }
