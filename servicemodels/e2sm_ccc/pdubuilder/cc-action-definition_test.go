@@ -16,7 +16,6 @@ func TestCreateE2SmCCcRIcactionDefinition(t *testing.T) {
 	ricStyleType := &e2smcommoniesv1.RicStyleType{}
 	actionDefinitionFormat := &e2smcccv1.ActionDefinitionFormat{}
 
-
 	result, err := CreateE2SmCCcRIcactionDefinition(ricStyleType, actionDefinitionFormat)
 
 	encodedMsg, err := encoder.PerEncodeE2SmCCcRIcactionDefinition(result)
@@ -47,7 +46,6 @@ func TestCreateListOfRanconfigurationStructuresForAdf(t *testing.T) {
 	result, err := CreateListOfRanconfigurationStructuresForAdf(value)
 	assert.NoError(t, err)
 	assert.NotNil(t, result)
-
 
 	for _, item := range result.Value {
 		err = item.Validate()

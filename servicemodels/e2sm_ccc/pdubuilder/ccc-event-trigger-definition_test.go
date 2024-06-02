@@ -6,7 +6,6 @@ package pdubuilder
 import (
 	"testing"
 
-
 	encoder "github.com/onosproject/onos-e2-sm/servicemodels/e2sm_ccc/encoder"
 	e2smcccv1 "github.com/onosproject/onos-e2-sm/servicemodels/e2sm_ccc/v1/e2sm-ccc-ies"
 	"github.com/stretchr/testify/assert"
